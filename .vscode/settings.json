@@ -51,8 +51,7 @@
     {
       "alias": "smart_sales",
       "type": "file",
-      "path": "./artifacts/smart_sales.duckdb",
-      "readOnly": true,
+      "path": "c:\\Repos\\44632-Business Intelligence and Analytics\\bintel-04-warehouse\\artifacts\\smart_sales.duckdb",
       "attached": false
     }
   ],
