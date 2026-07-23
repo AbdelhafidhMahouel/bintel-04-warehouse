@@ -127,3 +127,178 @@
 2026-07-20 07:09:00 | INFO | BI | ========================
 2026-07-20 07:09:00 | INFO | BI | Executed successfully!
 2026-07-20 07:09:00 | INFO | BI | ========================
+2026-07-22 22:57:25 | INFO | BI | === RUN START ===
+2026-07-22 22:57:25 | INFO | BI | project=BI
+2026-07-22 22:57:25 | INFO | BI | repo_dir=bintel-04-warehouse
+2026-07-22 22:57:25 | INFO | BI | python=3.14.2
+2026-07-22 22:57:25 | INFO | BI | os=Windows 11
+2026-07-22 22:57:25 | INFO | BI | shell=powershell
+2026-07-22 22:57:25 | INFO | BI | cwd=.
+2026-07-22 22:57:25 | INFO | BI | github_actions=False
+2026-07-22 22:57:25 | INFO | BI | ========================
+2026-07-22 22:57:25 | INFO | BI | START main()
+2026-07-22 22:57:25 | INFO | BI | ========================
+2026-07-22 22:57:25 | INFO | BI | Raw data:  = data\raw
+2026-07-22 22:57:25 | INFO | BI | Customers: = data\raw\customers_data.csv
+2026-07-22 22:57:25 | INFO | BI | Products:  = data\raw\products_data.csv
+2026-07-22 22:57:25 | INFO | BI | Sales:     = data\raw\sales_data.csv
+2026-07-22 22:57:25 | INFO | BI | CALL a function to load each dataset.............
+2026-07-22 22:57:25 | INFO | BI | Loading customers from data\raw\customers_data.csv
+2026-07-22 22:57:25 | INFO | BI | Loaded: 201 rows, 4 columns
+2026-07-22 22:57:25 | INFO | BI | Loading products from data\raw\products_data.csv
+2026-07-22 22:57:25 | INFO | BI | Loaded: 100 rows, 4 columns
+2026-07-22 22:57:25 | INFO | BI | Loading sales from data\raw\sales_data.csv
+2026-07-22 22:57:25 | INFO | BI | Loaded: 2400 rows, 7 columns
+2026-07-22 22:57:25 | INFO | BI | CALL a function to get sales by region........
+2026-07-22 22:57:25 | INFO | BI | Aggregating sales by region
+2026-07-22 22:57:25 | INFO | BI |   Top region: East ($1,234,686.51)
+2026-07-22 22:57:25 | INFO | BI | Returning DataFrame with total sales by region
+2026-07-22 22:57:25 | INFO | BI | CALL a function to plot sales by region........
+2026-07-22 22:57:25 | INFO | BI | Creating chart: Total Sales by Region
+2026-07-22 22:57:29 | INFO | BI | CALL a function to get sales by product category........
+2026-07-22 22:57:29 | INFO | BI | Aggregating sales by product category
+2026-07-22 22:57:29 | INFO | BI |   Top category: Office ($1,420,376.39)
+2026-07-22 22:57:29 | INFO | BI | CALL a function to plot sales by product category........
+2026-07-22 22:57:29 | INFO | BI | Creating chart: Total Sales by Product Category
+2026-07-22 22:57:29 | INFO | BI | CALL a function to summarize the datasets........
+2026-07-22 22:57:29 | INFO | BI | ========================
+2026-07-22 22:57:29 | INFO | BI | SUMMARY
+2026-07-22 22:57:29 | INFO | BI | ========================
+2026-07-22 22:57:29 | INFO | BI | Customers:  201 rows, 4 columns
+2026-07-22 22:57:29 | INFO | BI | Products:   100 rows, 4 columns
+2026-07-22 22:57:29 | INFO | BI | Sales:      2400 rows, 7 columns
+2026-07-22 22:57:29 | INFO | BI | ========================
+2026-07-22 22:57:29 | INFO | BI | ANALYST NOTES:
+2026-07-22 22:57:29 | INFO | BI | Note any data quality issues.
+2026-07-22 22:57:29 | INFO | BI | We will clean data later.
+2026-07-22 22:57:29 | INFO | BI | ========================
+2026-07-22 22:57:29 | INFO | BI | CALL a function to show charts........
+2026-07-22 22:59:14 | INFO | BI | Workflow complete
+2026-07-22 22:59:14 | INFO | BI | CLOSE chart windows to continue.
+2026-07-22 22:59:14 | INFO | BI | Terminate this process with CTRL+c as needed.
+2026-07-22 22:59:14 | INFO | BI | ========================
+2026-07-22 22:59:14 | INFO | BI | Executed successfully!
+2026-07-22 22:59:14 | INFO | BI | ========================
+2026-07-22 23:00:03 | INFO | BI | === RUN START ===
+2026-07-22 23:00:03 | INFO | BI | project=BI
+2026-07-22 23:00:03 | INFO | BI | repo_dir=bintel-04-warehouse
+2026-07-22 23:00:03 | INFO | BI | python=3.14.2
+2026-07-22 23:00:03 | INFO | BI | os=Windows 11
+2026-07-22 23:00:03 | INFO | BI | shell=powershell
+2026-07-22 23:00:03 | INFO | BI | cwd=.
+2026-07-22 23:00:03 | INFO | BI | github_actions=False
+2026-07-22 23:00:03 | INFO | BI | ========================
+2026-07-22 23:00:03 | INFO | BI | START main()
+2026-07-22 23:00:03 | INFO | BI | ========================
+2026-07-22 23:00:03 | INFO | BI | Data warehouse: = artifacts\smart_sales.duckdb
+2026-07-22 23:00:03 | INFO | BI | Create the artifacts/ folder if it does not exist
+2026-07-22 23:00:03 | INFO | BI | Connect to DuckDB - creates the file if it does not exist
+2026-07-22 23:00:03 | INFO | BI | Connecting to DuckDB data warehouse........
+2026-07-22 23:00:03 | INFO | BI | Created conn: a DuckDB connection object
+2026-07-22 23:00:03 | INFO | BI | CALL a function to delete tables in reverse order of creation
+2026-07-22 23:00:03 | INFO | BI | START delete tables....
+2026-07-22 23:00:03 | INFO | BI | - Dropping fact_sales table if it exists
+2026-07-22 23:00:03 | INFO | BI | - Dropping dim_products table if it exists
+2026-07-22 23:00:03 | INFO | BI | - Dropping dim_customers table if it exists
+2026-07-22 23:00:03 | INFO | BI |   All tables deleted.
+2026-07-22 23:00:03 | INFO | BI | CALL a function to create dim_customers........
+2026-07-22 23:00:03 | INFO | BI | PASS IN conn: the DuckDB connection object
+2026-07-22 23:00:03 | INFO | BI | START create customers dimension table....
+2026-07-22 23:00:03 | INFO | BI | DROP the table if it already exists so we can recreate it cleanly
+2026-07-22 23:00:03 | INFO | BI | - Use SQL command: DROP TABLE IF EXISTS dim_customers
+2026-07-22 23:00:03 | INFO | BI | - Use conn.execute() to run the SQL command
+2026-07-22 23:00:03 | INFO | BI | CREATE TABLE with typed columns
+2026-07-22 23:00:03 | INFO | BI | - Every table should have one primary key column
+2026-07-22 23:00:03 | INFO | BI | - Look at the data to decide suitable column types
+2026-07-22 23:00:03 | INFO | BI | - CustomerID is the primary key and should be an INTEGER
+2026-07-22 23:00:03 | INFO | BI | - Name is text so we use VARCHAR (variable number of characters)
+2026-07-22 23:00:03 | INFO | BI | - Region is text so we use VARCHAR (variable number of characters)
+2026-07-22 23:00:03 | INFO | BI | - JoinDate should be a DATE column
+2026-07-22 23:00:03 | INFO | BI |   dim_customers created.
+2026-07-22 23:00:03 | INFO | BI | CALL a function to create dim_products........
+2026-07-22 23:00:03 | INFO | BI | PASS IN conn: the DuckDB connection object
+2026-07-22 23:00:03 | INFO | BI | START create products dimension table....
+2026-07-22 23:00:03 | INFO | BI | DROP the table if it already exists so we can recreate it cleanly
+2026-07-22 23:00:03 | INFO | BI | - Use SQL command: DROP TABLE IF EXISTS dim_products
+2026-07-22 23:00:03 | INFO | BI | - Use conn.execute() to run the SQL command
+2026-07-22 23:00:03 | INFO | BI | CREATE TABLE with typed columns
+2026-07-22 23:00:03 | INFO | BI | - Every table should have one primary key column
+2026-07-22 23:00:03 | INFO | BI | - Look at the data to decide suitable column types
+2026-07-22 23:00:03 | INFO | BI | - ProductID is the primary key and should be an INTEGER
+2026-07-22 23:00:03 | INFO | BI | - ProductName is text so we use VARCHAR (variable number of characters)
+2026-07-22 23:00:03 | INFO | BI | - Category is text so we use VARCHAR (variable number of characters)
+2026-07-22 23:00:03 | INFO | BI | - UnitPrice should be a DOUBLE column
+2026-07-22 23:00:03 | INFO | BI |   dim_products created.
+2026-07-22 23:00:03 | INFO | BI | CALL a function to create fact_sales........
+2026-07-22 23:00:03 | INFO | BI | PASS IN conn: the DuckDB connection object
+2026-07-22 23:00:03 | INFO | BI | START create sales fact table....
+2026-07-22 23:00:03 | INFO | BI | DROP the table if it already exists so we can recreate it cleanly
+2026-07-22 23:00:03 | INFO | BI | - Use SQL command: DROP TABLE IF EXISTS fact_sales
+2026-07-22 23:00:03 | INFO | BI | - Use conn.execute() to run the SQL command
+2026-07-22 23:00:03 | INFO | BI | The fact table references the dimension tables
+2026-07-22 23:00:03 | INFO | BI |    - use a foreign key to dim_customers(CustomerID)
+2026-07-22 23:00:03 | INFO | BI |    - use a foreign key to dim_products(ProductID)
+2026-07-22 23:00:03 | INFO | BI |    - the REFERENCES keyword ensures referential integrity
+2026-07-22 23:00:03 | INFO | BI |    - every sale must link to a valid customer and product
+2026-07-22 23:00:03 | INFO | BI |   fact_sales created.
+2026-07-22 23:00:03 | INFO | BI | CALL a function to verify the schema........
+2026-07-22 23:00:03 | INFO | BI | PASS IN conn: the DuckDB connection object
+2026-07-22 23:00:03 | INFO | BI | START verify warehouse schema....
+2026-07-22 23:00:03 | INFO | BI | SHOW TABLES returns a list of all tables in the database
+2026-07-22 23:00:03 | INFO | BI | - Calling .fetchall() on the result of SHOW TABLES
+2026-07-22 23:00:03 | INFO | BI | - Gets the result - we can store it in a variable named 'tables'
+2026-07-22 23:00:03 | INFO | BI |   - Retrieved tables from the warehouse.
+2026-07-22 23:00:03 | INFO | BI |  - tables has a tuple for each table in the warehouse
+2026-07-22 23:00:03 | INFO | BI |  - the first tuple element (at the 0 index) is the table name
+2026-07-22 23:00:03 | INFO | BI |   Tables in warehouse: ['dim_customers', 'dim_products', 'fact_sales']
+2026-07-22 23:00:03 | INFO | BI | Workflow 1-CREATE DW complete
+2026-07-22 23:00:03 | INFO | BI | ========================
+2026-07-22 23:00:03 | INFO | BI | Executed successfully!
+2026-07-22 23:00:03 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | === RUN START ===
+2026-07-22 23:00:44 | INFO | BI | project=BI
+2026-07-22 23:00:44 | INFO | BI | repo_dir=bintel-04-warehouse
+2026-07-22 23:00:44 | INFO | BI | python=3.14.2
+2026-07-22 23:00:44 | INFO | BI | os=Windows 11
+2026-07-22 23:00:44 | INFO | BI | shell=powershell
+2026-07-22 23:00:44 | INFO | BI | cwd=.
+2026-07-22 23:00:44 | INFO | BI | github_actions=False
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | START main()
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | Prepared data: = data\prepared
+2026-07-22 23:00:44 | INFO | BI | Data warehouse: = artifacts\smart_sales.duckdb
+2026-07-22 23:00:44 | INFO | BI | CALL a function to load each prepared dataset.............
+2026-07-22 23:00:44 | INFO | BI | Loading customers prepared from data\prepared\customers_data_prepared.csv
+2026-07-22 23:00:44 | INFO | BI | Loaded: 200 rows, 4 columns
+2026-07-22 23:00:44 | INFO | BI | Loading products prepared from data\prepared\products_data_prepared.csv
+2026-07-22 23:00:44 | INFO | BI | Loaded: 100 rows, 4 columns
+2026-07-22 23:00:44 | INFO | BI | Loading sales prepared from data\prepared\sales_data_prepared.csv
+2026-07-22 23:00:44 | INFO | BI | Loaded: 2392 rows, 7 columns
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | ROW COUNTS BEFORE LOAD
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI |   Customers: 200 rows
+2026-07-22 23:00:44 | INFO | BI |   Products:  100 rows
+2026-07-22 23:00:44 | INFO | BI |   Sales:     2392 rows
+2026-07-22 23:00:44 | INFO | BI | Connecting to DuckDB data warehouse........
+2026-07-22 23:00:44 | INFO | BI | CALL a function to load customers........
+2026-07-22 23:00:44 | INFO | BI | Loading customers into dim_customers
+2026-07-22 23:00:44 | INFO | BI |   Loaded 200 rows into dim_customers
+2026-07-22 23:00:44 | INFO | BI | CALL a function to load products........
+2026-07-22 23:00:44 | INFO | BI | Loading products into dim_products
+2026-07-22 23:00:44 | INFO | BI |   Loaded 100 rows into dim_products
+2026-07-22 23:00:44 | INFO | BI | CALL a function to load sales........
+2026-07-22 23:00:44 | INFO | BI | Loading sales into fact_sales
+2026-07-22 23:00:44 | INFO | BI |   Loaded 2392 rows into fact_sales
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | ROW COUNTS AFTER LOAD
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | CALL a function to verify row counts........
+2026-07-22 23:00:44 | INFO | BI |   PASS: dim_customers has 200 rows
+2026-07-22 23:00:44 | INFO | BI |   PASS: dim_products has 100 rows
+2026-07-22 23:00:44 | INFO | BI |   PASS: fact_sales has 2392 rows
+2026-07-22 23:00:44 | INFO | BI | Workflow 2-ETL complete
+2026-07-22 23:00:44 | INFO | BI | ========================
+2026-07-22 23:00:44 | INFO | BI | Executed successfully!
+2026-07-22 23:00:44 | INFO | BI | ========================
