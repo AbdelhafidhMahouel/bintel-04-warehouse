@@ -1,0 +1,20 @@
+ProductID,ProductName,Category,BatchSizeKg,ShelfLifeDays
+3000,Sourdough Loaf,Bakery,398.3,119
+3001,Whole Wheat Bun,Bakery,436.4,81
+3002,Cinnamon Roll, bakery,363.8,40
+3003,Baguette,Bakery,489.0,21
+3004,Greek Yogurt Cup,Dairy,392.5,130
+3005,Cheddar Block,Dairy,107.7,142
+3006,Whole Milk Jug,Dairy,252.7,92
+3007,Butter Stick,Dairy,467.0,69
+3008,Trail Mix Bag,Snacks,339.7,75
+3009,Pretzel Box,Snacks,249.5,148
+3010,Granola Bar  ,Snacks,152.3,21
+3011,Popcorn Pack,Snacks,78.7,102
+3012,Frozen Pizza,Frozen,422.4,53
+3013,Veggie Medley Bag,Frozen,391.1,115
+3014,Ice Cream Pint,Frozen,209.5,16
+3015,Frozen Waffles,Frozen,451.9,174
+3016,Orange Juice Carton,Beverages,400.3,137
+3017,Sparkling Water Can,Beverages,260.0,39
+3018,Iced Tea Bottle,Beverages,69.7,100

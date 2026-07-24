@@ -1,0 +1,6 @@
+LineID,LineName,Plant,CapacityUnitsPerHour
+1,Line A - Mixing,Springfield Plant,1200
+2,Line B - Baking,Springfield Plant,900
+3,Line C - Packaging,Springfield Plant,1500
+4,Line D - Dairy Fill,Riverside Plant,1000
+5,Line E - Frozen Pack,Riverside Plant,800

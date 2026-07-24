@@ -53,7 +53,13 @@
       "type": "file",
       "path": "c:\\Repos\\44632-Business Intelligence and Analytics\\bintel-04-warehouse\\artifacts\\smart_sales.duckdb",
       "attached": false
+    },
+    {
+      "alias": "food_manufacturing",
+      "type": "file",
+      "path": "c:\\Repos\\44632-Business Intelligence and Analytics\\bintel-04-warehouse\\artifacts\\food_manufacturing.duckdb",
+      "attached": false
     }
   ],
-  "duckdb.defaultDatabase": "smart_sales"
+  "duckdb.defaultDatabase": "food_manufacturing"
 }

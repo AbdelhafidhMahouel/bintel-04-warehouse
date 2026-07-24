@@ -4,14 +4,15 @@
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
-> Professional Python project: building and populating a smart sales data warehouse using ETVL.
+> Professional Python project: building and populating star schema data warehouses using ETVL,
+> applied to both a smart sales example and a custom food manufacturing project.
 
 ## Project Description
 
-This project focuses on designing a star schema data warehouse
-and loading prepared data into it using the ETVL process:
+This project focuses on designing star schema data warehouses
+and loading prepared data into them using the ETVL process:
 Extract from prepared CSV files, Transform for the warehouse schema,
-Verify row counts and integrity, then Load into SQLite.
+Verify row counts and integrity, then Load into DuckDB.
 
 We work with cleaned smart sales data containing
 customers, products, and sales records.
@@ -22,6 +23,20 @@ We learn to:
 - extract and transform prepared CSV data for the warehouse schema
 - verify tables are populated correctly before and after loading
 - query the warehouse to confirm data integrity
+
+## Custom Work in This Repo
+
+Beyond the instructor's example, this repo includes two custom additions:
+
+- **`app_abdel.py`** - extends the raw-data exploration example with a
+  customer revenue concentration analysis (top 5 customers and their
+  share of total revenue), and persists chart images and a results
+  table to `artifacts/` instead of only showing temporary chart windows.
+- **`dw_create_foodmfg.py` / `etl_foodmfg.py` / `app_foodmfg.py`** - a
+  completely separate star schema data warehouse applying the same
+  ETVL concepts to a food manufacturing production-monitoring problem:
+  tracking production runs across manufacturing lines and food products
+  to analyze output volume, defect rates, and downtime by shift.
 
 ## Use Your Prepared Data
 
@@ -140,6 +155,20 @@ uv run python -m bizintel.dw_create_case
 # Workflow 3: etl (extract-transform-load) prepared data into dw
 uv run python -m bizintel.etl_case
 
+# My custom smart sales warehouse (with added columns: customer_tenure_years,
+# price_tier, sale_year, sale_quarter)
+uv run python -m bizintel.dw_create_abdel
+uv run python -m bizintel.etl_abdel
+
+# My technical modification: adds customer revenue concentration analysis
+# and persists charts/tables to artifacts/
+uv run python -m bizintel.app_abdel
+
+# My custom Phase 5 project: food manufacturing production warehouse
+uv run python -m bizintel.dw_create_foodmfg
+uv run python -m bizintel.etl_foodmfg
+uv run python -m bizintel.app_foodmfg
+
 # run common chores
 uv run ruff format .
 uv run ruff check . --fix
@@ -176,16 +205,11 @@ If you try to run Python that interacts with the DuckDB file and get an error th
 file is being used by another process, just
 click the **DuckDB left-side tab**, right-click your database and select **Detach Database**.
 
-## Workflow 1. Example Output (Remove or Replace this Section after You Verify)
+## Workflow 1. Verified Output (Example Warehouse)
 
 ```shell
 | INFO | BI | START verify warehouse schema....
 | INFO | BI | SHOW TABLES returns a list of all tables in the database
-| INFO | BI | - Calling .fetchall() on the result of SHOW TABLES
-| INFO | BI | - Gets the result - we can store it in a variable named 'tables'
-| INFO | BI |   - Retrieved tables from the warehouse.
-| INFO | BI |  - tables has a tuple for each table in the warehouse
-| INFO | BI |  - the first tuple element (at the 0 index) is the table name
 | INFO | BI |   Tables in warehouse: ['dim_customers', 'dim_products', 'fact_sales']
 | INFO | BI | Workflow 1-CREATE DW complete
 | INFO | BI | ========================
@@ -193,13 +217,12 @@ click the **DuckDB left-side tab**, right-click your database and select **Detac
 | INFO | BI | ========================
 ```
 
-## Workflow 2. Example Output (Remove or Replace this Section after You Verify)
+## Workflow 2. Verified Output (Example Warehouse)
 
 ```shell
 | INFO | BI | ========================
 | INFO | BI | ROW COUNTS AFTER LOAD
 | INFO | BI | ========================
-| INFO | BI | CALL a function to verify row counts........
 | INFO | BI |   PASS: dim_customers has 200 rows
 | INFO | BI |   PASS: dim_products has 100 rows
 | INFO | BI |   PASS: fact_sales has 2392 rows
@@ -208,24 +231,48 @@ click the **DuckDB left-side tab**, right-click your database and select **Detac
 | INFO | BI | Executed successfully!
 ```
 
+## Workflow 3. Verified Output (Food Manufacturing Warehouse - Phase 5)
+
+```shell
+| INFO | BI |   Highest-volume line: Line A - Mixing (808,286 units)
+| INFO | BI |   Highest average defect rate: Frozen (3.27%)
+| INFO | BI |   Highest total downtime shift: Night (29,854 min)
+| INFO | BI | Workflow complete
+| INFO | BI | ========================
+| INFO | BI | Executed successfully!
+| INFO | BI | ========================
+```
+
 ## Findings and Visuals
 
-Take screenshots of your charts and provide them here with a discussion.
-In Markdown, display a figure using:
-an exclamation mark immediately followed by square brackets containing a useful caption
-immediately followed by parentheses containing the relative path to your figure.
-
-In your custom project:
-
-- your figures and narrative should reflect your work
-- this `README.md` should include your commands, process, and visuals
-- `docs/index.md` should include your narrative
-
-Replace these placeholders with screenshots from your own project run:
+### Smart Sales Warehouse (Example + My Modification)
 
 ![Total Sales by Region](./docs/images/Figure_1.png)
 
 ![Total Sales by Product Category](./docs/images/Figure_2.png)
+
+My technical modification (`app_abdel.py`) added a top-5 customer
+revenue concentration analysis. Jessica Mora is the top customer at
+$260,450.52, and the top 5 customers together represent 21.1% of
+total revenue ($802,722.78 of $3,803,615.11).
+
+![Top 5 Customers by Total Sales](./docs/images/top_customers.png)
+
+### Food Manufacturing Warehouse (Phase 5 Custom Project)
+
+Applying the same star schema and ETVL concepts to a food
+manufacturing production-monitoring problem, I found:
+
+- **Line A - Mixing** is the highest-volume production line
+  (808,286 units produced)
+- **Frozen** products have the highest average defect rate (3.27%)
+- **Night shift** has the highest total downtime (29,854 minutes)
+
+![Total Units Produced by Line](./docs/images/units_by_line.png)
+
+![Average Defect Rate by Product Category](./docs/images/defect_rate_by_category.png)
+
+![Total Downtime Minutes by Shift](./docs/images/downtime_by_shift.png)
 
 ## Project Documentation
 
