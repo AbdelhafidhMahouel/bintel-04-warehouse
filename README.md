@@ -105,7 +105,7 @@ open a machine terminal in your `Repos` folder:
 
 ```shell
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/bintel-04-warehouse
+git clone https://github.com/AbdelhafidhMahouel/bintel-04-warehouse
 
 cd bintel-04-warehouse
 code .

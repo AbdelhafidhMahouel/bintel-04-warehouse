@@ -20,9 +20,12 @@ authors:
     given-names: Denise M.
     orcid: "https://orcid.org/0000-0001-6165-7389"
     affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+  - family-names: Mahouel
+    given-names: Abdelhafidh
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
 
-repository-code: "https://github.com/denisecase/bintel-04-warehouse"
-url: "https://github.com/denisecase/bintel-04-warehouse"
+repository-code: "https://github.com/AbdelhafidhMahouel/bintel-04-warehouse"
+url: "https://github.com/AbdelhafidhMahouel/bintel-04-warehouse"
 license: MIT
 
 abstract: >
